@@ -7,50 +7,50 @@ export default function Page() {
 
   const plans = [
     {
-      name: 'Базовый',
-      description: 'Для начинающих и малого бизнеса',
+      name: '基础版',
+      description: '适合初创企业和小型企业',
       priceMonthly: 990,
       priceYearly: 9900,
       features: [
-        'До 10 проектов',
-        '5 ГБ хранилища',
-        'Базовая поддержка',
-        'Email уведомления',
-        'Доступ к API',
+        '最多10个项目',
+        '5 GB 存储空间',
+        '基础支持',
+        '电子邮件通知',
+        'API访问',
       ],
       popular: false,
     },
     {
-      name: 'Профессиональный',
-      description: 'Для растущих команд',
+      name: '专业版',
+      description: '适合成长型团队',
       priceMonthly: 2490,
       priceYearly: 24900,
       features: [
-        'Безлимитные проекты',
-        '100 ГБ хранилища',
-        'Приоритетная поддержка',
-        'Email и SMS уведомления',
-        'Расширенный API',
-        'Аналитика и отчёты',
-        'Интеграции',
+        '无限项目',
+        '100 GB 存储空间',
+        '优先支持',
+        '电子邮件和短信通知',
+        '扩展API',
+        '分析和报告',
+        '集成功能',
       ],
       popular: true,
     },
     {
-      name: 'Корпоративный',
-      description: 'Для крупного бизнеса',
+      name: '企业版',
+      description: '适合大型企业',
       priceMonthly: 4990,
       priceYearly: 49900,
       features: [
-        'Безлимитные проекты',
-        '1 ТБ хранилища',
-        'VIP поддержка 24/7',
-        'Все виды уведомлений',
-        'Полный доступ к API',
-        'Расширенная аналитика',
-        'Все интеграции',
-        'Персональный менеджер',
-        'SLA гарантия',
+        '无限项目',
+        '1 TB 存储空间',
+        'VIP 24/7支持',
+        '所有类型通知',
+        '完整API访问',
+        '高级分析',
+        '所有集成',
+        '专属客户经理',
+        'SLA保证',
       ],
       popular: false,
     },
@@ -66,17 +66,17 @@ export default function Page() {
             </div>
             <div className="hidden md:flex gap-8">
               <a href="#features" className="text-slate-600 hover:text-slate-900 transition">
-                Возможности
+                功能
               </a>
               <a href="#pricing" className="text-slate-600 hover:text-slate-900 transition">
-                Цены
+                价格
               </a>
               <a href="#contact" className="text-slate-600 hover:text-slate-900 transition">
-                Контакты
+                联系我们
               </a>
             </div>
             <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
-              Войти
+              登录
             </button>
           </div>
         </nav>
@@ -86,20 +86,20 @@ export default function Page() {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6">
-              Управляйте проектами
+              高效管理项目
               <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                эффективно
+                提升生产力
               </span>
             </h1>
             <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
-              Современная платформа для управления проектами, которая помогает командам работать продуктивнее
+              现代化的项目管理平台，帮助团队更高效地工作
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition shadow-lg">
-                Начать бесплатно
+                免费开始
               </button>
               <button className="bg-white text-slate-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-slate-50 transition border-2 border-slate-200">
-                Смотреть демо
+                观看演示
               </button>
             </div>
           </div>
@@ -109,43 +109,43 @@ export default function Page() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">
-                Всё что нужно для работы
+                工作所需的一切
               </h2>
               <p className="text-lg text-slate-600">
-                Мощные инструменты для эффективной работы вашей команды
+                强大的工具助力团队高效协作
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  title: 'Управление задачами',
-                  description: 'Создавайте, назначайте и отслеживайте задачи в удобном интерфейсе',
+                  title: '任务管理',
+                  description: '在便捷的界面中创建、分配和跟踪任务',
                   icon: '📋',
                 },
                 {
-                  title: 'Командная работа',
-                  description: 'Работайте вместе в реальном времени с коллегами',
+                  title: '团队协作',
+                  description: '与同事实时协作工作',
                   icon: '👥',
                 },
                 {
-                  title: 'Аналитика',
-                  description: 'Получайте подробные отчёты о прогрессе проектов',
+                  title: '数据分析',
+                  description: '获取项目进度的详细报告',
                   icon: '📊',
                 },
                 {
-                  title: 'Интеграции',
-                  description: 'Подключайте любимые инструменты и сервисы',
+                  title: '集成功能',
+                  description: '连接您喜爱的工具和服务',
                   icon: '🔗',
                 },
                 {
-                  title: 'Безопасность',
-                  description: 'Защита данных на уровне банковских стандартов',
+                  title: '安全保障',
+                  description: '银行级别的数据保护标准',
                   icon: '🔒',
                 },
                 {
-                  title: 'Поддержка 24/7',
-                  description: 'Круглосуточная помощь от команды экспертов',
+                  title: '24/7支持',
+                  description: '专家团队全天候提供帮助',
                   icon: '💬',
                 },
               ].map((feature, index) => (
@@ -166,10 +166,10 @@ export default function Page() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">
-                Прозрачные цены
+                透明的价格
               </h2>
               <p className="text-lg text-slate-600 mb-8">
-                Выберите план, который подходит именно вам
+                选择最适合您的方案
               </p>
 
               <div className="inline-flex items-center bg-white rounded-lg p-1 shadow-sm">
@@ -181,7 +181,7 @@ export default function Page() {
                       : 'text-slate-600 hover:text-slate-900'
                   }`}
                 >
-                  Ежемесячно
+                  按月付费
                 </button>
                 <button
                   onClick={() => setActiveTab('yearly')}
@@ -191,7 +191,7 @@ export default function Page() {
                       : 'text-slate-600 hover:text-slate-900'
                   }`}
                 >
-                  Ежегодно
+                  按年付费
                   <span className="ml-2 text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">
                     -17%
                   </span>
@@ -211,7 +211,7 @@ export default function Page() {
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
-                      Популярный
+                      最受欢迎
                     </div>
                   )}
 
@@ -230,12 +230,12 @@ export default function Page() {
                           : Math.round(plan.priceYearly / 12).toLocaleString()}
                       </span>
                       <span className={`ml-2 ${plan.popular ? 'text-blue-100' : 'text-slate-600'}`}>
-                        ₽/мес
+                        ₽/月
                       </span>
                     </div>
                     {activeTab === 'yearly' && (
                       <p className={`text-sm mt-2 ${plan.popular ? 'text-blue-100' : 'text-slate-500'}`}>
-                        {plan.priceYearly.toLocaleString()} ₽ в год
+                        每年 {plan.priceYearly.toLocaleString()} ₽
                       </p>
                     )}
                   </div>
@@ -272,7 +272,7 @@ export default function Page() {
                         : 'bg-blue-600 text-white hover:bg-blue-700'
                     }`}
                   >
-                    Выбрать план
+                    选择方案
                   </button>
                 </div>
               ))}
@@ -280,9 +280,9 @@ export default function Page() {
 
             <div className="mt-12 text-center">
               <p className="text-slate-600">
-                Нужен индивидуальный план?{' '}
+                需要定制方案？{' '}
                 <a href="#contact" className="text-blue-600 hover:text-blue-700 font-semibold">
-                  Свяжитесь с нами
+                  联系我们
                 </a>
               </p>
             </div>
@@ -292,13 +292,13 @@ export default function Page() {
         <section id="contact" className="bg-white py-16 md:py-24">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">
-              Готовы начать?
+              准备开始了吗？
             </h2>
             <p className="text-lg text-slate-600 mb-8">
-              Присоединяйтесь к более чем 10,000 команд, которые доверяют CloudPro
+              加入超过10,000个信任CloudPro的团队
             </p>
             <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-lg text-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition shadow-xl">
-              Попробовать бесплатно
+              免费试用
             </button>
           </div>
         </section>
@@ -312,36 +312,36 @@ export default function Page() {
                 CloudPro
               </div>
               <p className="text-slate-400">
-                Современная платформа для управления проектами
+                现代化的项目管理平台
               </p>
             </div>
             <div>
-              <h3 className="font-semibold mb-4">Продукт</h3>
+              <h3 className="font-semibold mb-4">产品</h3>
               <ul className="space-y-2 text-slate-400">
-                <li><a href="#" className="hover:text-white transition">Возможности</a></li>
-                <li><a href="#" className="hover:text-white transition">Цены</a></li>
-                <li><a href="#" className="hover:text-white transition">Интеграции</a></li>
+                <li><a href="#" className="hover:text-white transition">功能</a></li>
+                <li><a href="#" className="hover:text-white transition">价格</a></li>
+                <li><a href="#" className="hover:text-white transition">集成</a></li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold mb-4">Компания</h3>
+              <h3 className="font-semibold mb-4">公司</h3>
               <ul className="space-y-2 text-slate-400">
-                <li><a href="#" className="hover:text-white transition">О нас</a></li>
-                <li><a href="#" className="hover:text-white transition">Блог</a></li>
-                <li><a href="#" className="hover:text-white transition">Карьера</a></li>
+                <li><a href="#" className="hover:text-white transition">关于我们</a></li>
+                <li><a href="#" className="hover:text-white transition">博客</a></li>
+                <li><a href="#" className="hover:text-white transition">招聘</a></li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold mb-4">Поддержка</h3>
+              <h3 className="font-semibold mb-4">支持</h3>
               <ul className="space-y-2 text-slate-400">
-                <li><a href="#" className="hover:text-white transition">Помощь</a></li>
-                <li><a href="#" className="hover:text-white transition">Контакты</a></li>
-                <li><a href="#" className="hover:text-white transition">Статус</a></li>
+                <li><a href="#" className="hover:text-white transition">帮助</a></li>
+                <li><a href="#" className="hover:text-white transition">联系方式</a></li>
+                <li><a href="#" className="hover:text-white transition">状态</a></li>
               </ul>
             </div>
           </div>
           <div className="border-t border-slate-800 pt-8 text-center text-slate-400">
-            <p>© 2024 CloudPro. Все права защищены.</p>
+            <p>© 2024 CloudPro. 保留所有权利。</p>
           </div>
         </div>
       </footer>
