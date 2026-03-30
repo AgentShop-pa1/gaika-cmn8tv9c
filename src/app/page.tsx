@@ -4,6 +4,12 @@ import { useState } from 'react'
 
 export default function Page() {
   const [activeTab, setActiveTab] = useState<'monthly' | 'yearly'>('monthly')
+  const [animatingButton, setAnimatingButton] = useState<string | null>(null)
+
+  const handleButtonClick = (buttonId: string) => {
+    setAnimatingButton(buttonId)
+    setTimeout(() => setAnimatingButton(null), 600)
+  }
 
   const plans = [
     {
@@ -58,6 +64,51 @@ export default function Page() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-red-50">
+      <style jsx global>{`
+        @keyframes wiggle {
+          0%, 100% { transform: rotate(0deg); }
+          25% { transform: rotate(-10deg); }
+          75% { transform: rotate(10deg); }
+        }
+        @keyframes bounce-crazy {
+          0%, 100% { transform: translateY(0) scale(1); }
+          25% { transform: translateY(-20px) scale(1.1); }
+          50% { transform: translateY(0) scale(0.9) rotate(5deg); }
+          75% { transform: translateY(-10px) scale(1.05) rotate(-5deg); }
+        }
+        @keyframes shake {
+          0%, 100% { transform: translateX(0); }
+          10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+          20%, 40%, 60%, 80% { transform: translateX(10px); }
+        }
+        @keyframes spin-squeeze {
+          0% { transform: rotate(0deg) scale(1); }
+          50% { transform: rotate(180deg) scale(0.8); }
+          100% { transform: rotate(360deg) scale(1); }
+        }
+        @keyframes jelly {
+          0%, 100% { transform: scale(1, 1); }
+          25% { transform: scale(0.9, 1.1); }
+          50% { transform: scale(1.1, 0.9); }
+          75% { transform: scale(0.95, 1.05); }
+        }
+        .animate-wiggle {
+          animation: wiggle 0.5s ease-in-out;
+        }
+        .animate-bounce-crazy {
+          animation: bounce-crazy 0.6s ease-in-out;
+        }
+        .animate-shake {
+          animation: shake 0.5s ease-in-out;
+        }
+        .animate-spin-squeeze {
+          animation: spin-squeeze 0.6s ease-in-out;
+        }
+        .animate-jelly {
+          animation: jelly 0.6s ease-in-out;
+        }
+      `}</style>
+
       <header className="bg-white shadow-sm sticky top-0 z-50 border-b border-red-100">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
@@ -75,7 +126,12 @@ export default function Page() {
                 联系我们
               </a>
             </div>
-            <button className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition">
+            <button 
+              onClick={() => handleButtonClick('login')}
+              className={`bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition ${
+                animatingButton === 'login' ? 'animate-wiggle' : ''
+              }`}
+            >
               登录
             </button>
           </div>
@@ -95,10 +151,20 @@ export default function Page() {
               现代化的项目管理平台，帮助团队更高效地工作
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-red-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-700 transition shadow-lg">
+              <button 
+                onClick={() => handleButtonClick('free-start')}
+                className={`bg-red-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-700 transition shadow-lg ${
+                  animatingButton === 'free-start' ? 'animate-bounce-crazy' : ''
+                }`}
+              >
                 免费开始
               </button>
-              <button className="bg-white text-red-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-50 transition border-2 border-red-200">
+              <button 
+                onClick={() => handleButtonClick('demo')}
+                className={`bg-white text-red-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-50 transition border-2 border-red-200 ${
+                  animatingButton === 'demo' ? 'animate-jelly' : ''
+                }`}
+              >
                 观看演示
               </button>
             </div>
@@ -174,22 +240,28 @@ export default function Page() {
 
               <div className="inline-flex items-center bg-white rounded-lg p-1 shadow-sm border border-red-200">
                 <button
-                  onClick={() => setActiveTab('monthly')}
+                  onClick={() => {
+                    setActiveTab('monthly')
+                    handleButtonClick('tab-monthly')
+                  }}
                   className={`px-6 py-2 rounded-md transition ${
                     activeTab === 'monthly'
                       ? 'bg-red-600 text-white'
                       : 'text-red-900 hover:text-red-600'
-                  }`}
+                  } ${animatingButton === 'tab-monthly' ? 'animate-shake' : ''}`}
                 >
                   按月付费
                 </button>
                 <button
-                  onClick={() => setActiveTab('yearly')}
+                  onClick={() => {
+                    setActiveTab('yearly')
+                    handleButtonClick('tab-yearly')
+                  }}
                   className={`px-6 py-2 rounded-md transition ${
                     activeTab === 'yearly'
                       ? 'bg-red-600 text-white'
                       : 'text-red-900 hover:text-red-600'
-                  }`}
+                  } ${animatingButton === 'tab-yearly' ? 'animate-shake' : ''}`}
                 >
                   按年付费
                   <span className="ml-2 text-xs bg-red-100 text-red-700 px-2 py-1 rounded-full">
@@ -266,11 +338,12 @@ export default function Page() {
                   </ul>
 
                   <button
+                    onClick={() => handleButtonClick(`plan-${index}`)}
                     className={`w-full py-3 rounded-lg font-semibold transition ${
                       plan.popular
                         ? 'bg-white text-red-600 hover:bg-red-50'
                         : 'bg-red-600 text-white hover:bg-red-700'
-                    }`}
+                    } ${animatingButton === `plan-${index}` ? 'animate-spin-squeeze' : ''}`}
                   >
                     选择方案
                   </button>
@@ -297,7 +370,12 @@ export default function Page() {
             <p className="text-lg text-red-800 mb-8">
               加入超过10,000个信任CloudPro的团队
             </p>
-            <button className="bg-gradient-to-r from-red-600 to-red-800 text-white px-10 py-4 rounded-lg text-lg font-semibold hover:from-red-700 hover:to-red-900 transition shadow-xl">
+            <button 
+              onClick={() => handleButtonClick('free-trial')}
+              className={`bg-gradient-to-r from-red-600 to-red-800 text-white px-10 py-4 rounded-lg text-lg font-semibold hover:from-red-700 hover:to-red-900 transition shadow-xl ${
+                animatingButton === 'free-trial' ? 'animate-bounce-crazy' : ''
+              }`}
+            >
               免费试用
             </button>
           </div>
