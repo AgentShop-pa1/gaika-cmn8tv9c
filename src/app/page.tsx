@@ -57,25 +57,25 @@ export default function Page() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
-      <header className="bg-white shadow-sm sticky top-0 z-50">
+    <div className="min-h-screen bg-gradient-to-br from-white to-red-50">
+      <header className="bg-white shadow-sm sticky top-0 z-50 border-b border-red-100">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <div className="text-2xl font-bold bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">
               CloudPro
             </div>
             <div className="hidden md:flex gap-8">
-              <a href="#features" className="text-slate-600 hover:text-slate-900 transition">
+              <a href="#features" className="text-red-900 hover:text-red-600 transition">
                 功能
               </a>
-              <a href="#pricing" className="text-slate-600 hover:text-slate-900 transition">
+              <a href="#pricing" className="text-red-900 hover:text-red-600 transition">
                 价格
               </a>
-              <a href="#contact" className="text-slate-600 hover:text-slate-900 transition">
+              <a href="#contact" className="text-red-900 hover:text-red-600 transition">
                 联系我们
               </a>
             </div>
-            <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+            <button className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition">
               登录
             </button>
           </div>
@@ -85,33 +85,33 @@ export default function Page() {
       <main>
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-red-900 mb-6">
               高效管理项目
-              <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">
                 提升生产力
               </span>
             </h1>
-            <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-red-800 mb-8 max-w-2xl mx-auto">
               现代化的项目管理平台，帮助团队更高效地工作
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition shadow-lg">
+              <button className="bg-red-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-700 transition shadow-lg">
                 免费开始
               </button>
-              <button className="bg-white text-slate-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-slate-50 transition border-2 border-slate-200">
+              <button className="bg-white text-red-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-50 transition border-2 border-red-200">
                 观看演示
               </button>
             </div>
           </div>
         </section>
 
-        <section id="features" className="bg-white py-16 md:py-24">
+        <section id="features" className="bg-white py-16 md:py-24 border-y border-red-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">
+              <h2 className="text-3xl md:text-5xl font-bold text-red-900 mb-4">
                 工作所需的一切
               </h2>
-              <p className="text-lg text-slate-600">
+              <p className="text-lg text-red-800">
                 强大的工具助力团队高效协作
               </p>
             </div>
@@ -151,34 +151,34 @@ export default function Page() {
               ].map((feature, index) => (
                 <div
                   key={index}
-                  className="p-6 rounded-xl bg-slate-50 hover:bg-slate-100 transition border border-slate-200"
+                  className="p-6 rounded-xl bg-red-50 hover:bg-red-100 transition border border-red-200"
                 >
                   <div className="text-4xl mb-4">{feature.icon}</div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">{feature.title}</h3>
-                  <p className="text-slate-600">{feature.description}</p>
+                  <h3 className="text-xl font-bold text-red-900 mb-2">{feature.title}</h3>
+                  <p className="text-red-800">{feature.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        <section id="pricing" className="py-16 md:py-24 bg-gradient-to-br from-slate-50 to-slate-100">
+        <section id="pricing" className="py-16 md:py-24 bg-gradient-to-br from-white to-red-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">
+              <h2 className="text-3xl md:text-5xl font-bold text-red-900 mb-4">
                 透明的价格
               </h2>
-              <p className="text-lg text-slate-600 mb-8">
+              <p className="text-lg text-red-800 mb-8">
                 选择最适合您的方案
               </p>
 
-              <div className="inline-flex items-center bg-white rounded-lg p-1 shadow-sm">
+              <div className="inline-flex items-center bg-white rounded-lg p-1 shadow-sm border border-red-200">
                 <button
                   onClick={() => setActiveTab('monthly')}
                   className={`px-6 py-2 rounded-md transition ${
                     activeTab === 'monthly'
-                      ? 'bg-blue-600 text-white'
-                      : 'text-slate-600 hover:text-slate-900'
+                      ? 'bg-red-600 text-white'
+                      : 'text-red-900 hover:text-red-600'
                   }`}
                 >
                   按月付费
@@ -187,12 +187,12 @@ export default function Page() {
                   onClick={() => setActiveTab('yearly')}
                   className={`px-6 py-2 rounded-md transition ${
                     activeTab === 'yearly'
-                      ? 'bg-blue-600 text-white'
-                      : 'text-slate-600 hover:text-slate-900'
+                      ? 'bg-red-600 text-white'
+                      : 'text-red-900 hover:text-red-600'
                   }`}
                 >
                   按年付费
-                  <span className="ml-2 text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">
+                  <span className="ml-2 text-xs bg-red-100 text-red-700 px-2 py-1 rounded-full">
                     -17%
                   </span>
                 </button>
@@ -205,19 +205,19 @@ export default function Page() {
                   key={index}
                   className={`rounded-2xl p-8 ${
                     plan.popular
-                      ? 'bg-gradient-to-br from-blue-600 to-purple-600 text-white shadow-2xl scale-105'
-                      : 'bg-white text-slate-900 shadow-lg'
+                      ? 'bg-gradient-to-br from-red-600 to-red-800 text-white shadow-2xl scale-105'
+                      : 'bg-white text-red-900 shadow-lg border border-red-200'
                   } relative`}
                 >
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-red-100 text-red-900 px-4 py-1 rounded-full text-sm font-semibold">
                       最受欢迎
                     </div>
                   )}
 
                   <div className="mb-6">
                     <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                    <p className={plan.popular ? 'text-blue-100' : 'text-slate-600'}>
+                    <p className={plan.popular ? 'text-red-100' : 'text-red-800'}>
                       {plan.description}
                     </p>
                   </div>
@@ -229,12 +229,12 @@ export default function Page() {
                           ? plan.priceMonthly.toLocaleString()
                           : Math.round(plan.priceYearly / 12).toLocaleString()}
                       </span>
-                      <span className={`ml-2 ${plan.popular ? 'text-blue-100' : 'text-slate-600'}`}>
+                      <span className={`ml-2 ${plan.popular ? 'text-red-100' : 'text-red-800'}`}>
                         ₽/月
                       </span>
                     </div>
                     {activeTab === 'yearly' && (
-                      <p className={`text-sm mt-2 ${plan.popular ? 'text-blue-100' : 'text-slate-500'}`}>
+                      <p className={`text-sm mt-2 ${plan.popular ? 'text-red-100' : 'text-red-700'}`}>
                         每年 {plan.priceYearly.toLocaleString()} ₽
                       </p>
                     )}
@@ -245,7 +245,7 @@ export default function Page() {
                       <li key={featureIndex} className="flex items-start">
                         <svg
                           className={`w-5 h-5 mr-3 mt-0.5 flex-shrink-0 ${
-                            plan.popular ? 'text-white' : 'text-green-500'
+                            plan.popular ? 'text-white' : 'text-red-600'
                           }`}
                           fill="none"
                           stroke="currentColor"
@@ -258,7 +258,7 @@ export default function Page() {
                             d="M5 13l4 4L19 7"
                           />
                         </svg>
-                        <span className={plan.popular ? 'text-blue-50' : 'text-slate-600'}>
+                        <span className={plan.popular ? 'text-red-50' : 'text-red-800'}>
                           {feature}
                         </span>
                       </li>
@@ -268,8 +268,8 @@ export default function Page() {
                   <button
                     className={`w-full py-3 rounded-lg font-semibold transition ${
                       plan.popular
-                        ? 'bg-white text-blue-600 hover:bg-blue-50'
-                        : 'bg-blue-600 text-white hover:bg-blue-700'
+                        ? 'bg-white text-red-600 hover:bg-red-50'
+                        : 'bg-red-600 text-white hover:bg-red-700'
                     }`}
                   >
                     选择方案
@@ -279,9 +279,9 @@ export default function Page() {
             </div>
 
             <div className="mt-12 text-center">
-              <p className="text-slate-600">
+              <p className="text-red-800">
                 需要定制方案？{' '}
-                <a href="#contact" className="text-blue-600 hover:text-blue-700 font-semibold">
+                <a href="#contact" className="text-red-600 hover:text-red-700 font-semibold">
                   联系我们
                 </a>
               </p>
@@ -289,35 +289,35 @@ export default function Page() {
           </div>
         </section>
 
-        <section id="contact" className="bg-white py-16 md:py-24">
+        <section id="contact" className="bg-white py-16 md:py-24 border-t border-red-100">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold text-red-900 mb-4">
               准备开始了吗？
             </h2>
-            <p className="text-lg text-slate-600 mb-8">
+            <p className="text-lg text-red-800 mb-8">
               加入超过10,000个信任CloudPro的团队
             </p>
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-lg text-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition shadow-xl">
+            <button className="bg-gradient-to-r from-red-600 to-red-800 text-white px-10 py-4 rounded-lg text-lg font-semibold hover:from-red-700 hover:to-red-900 transition shadow-xl">
               免费试用
             </button>
           </div>
         </section>
       </main>
 
-      <footer className="bg-slate-900 text-white py-12">
+      <footer className="bg-red-950 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              <div className="text-2xl font-bold mb-4 bg-gradient-to-r from-red-400 to-red-200 bg-clip-text text-transparent">
                 CloudPro
               </div>
-              <p className="text-slate-400">
+              <p className="text-red-200">
                 现代化的项目管理平台
               </p>
             </div>
             <div>
               <h3 className="font-semibold mb-4">产品</h3>
-              <ul className="space-y-2 text-slate-400">
+              <ul className="space-y-2 text-red-200">
                 <li><a href="#" className="hover:text-white transition">功能</a></li>
                 <li><a href="#" className="hover:text-white transition">价格</a></li>
                 <li><a href="#" className="hover:text-white transition">集成</a></li>
@@ -325,7 +325,7 @@ export default function Page() {
             </div>
             <div>
               <h3 className="font-semibold mb-4">公司</h3>
-              <ul className="space-y-2 text-slate-400">
+              <ul className="space-y-2 text-red-200">
                 <li><a href="#" className="hover:text-white transition">关于我们</a></li>
                 <li><a href="#" className="hover:text-white transition">博客</a></li>
                 <li><a href="#" className="hover:text-white transition">招聘</a></li>
@@ -333,14 +333,14 @@ export default function Page() {
             </div>
             <div>
               <h3 className="font-semibold mb-4">支持</h3>
-              <ul className="space-y-2 text-slate-400">
+              <ul className="space-y-2 text-red-200">
                 <li><a href="#" className="hover:text-white transition">帮助</a></li>
                 <li><a href="#" className="hover:text-white transition">联系方式</a></li>
                 <li><a href="#" className="hover:text-white transition">状态</a></li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-slate-800 pt-8 text-center text-slate-400">
+          <div className="border-t border-red-900 pt-8 text-center text-red-200">
             <p>© 2024 CloudPro. 保留所有权利。</p>
           </div>
         </div>
